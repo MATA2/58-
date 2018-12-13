@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        body {
+            background-color: #DF3939;
+        }
+
+        .img img {
+            width: 100%;
+            height: 16rem;
+        }
+
+        .backimg {
+            background: url("img/2_02.jpg") no-repeat center;
+            height: 13rem;
+            background-size: cover;
+            font-size: 2rem;
+        }
+        .font{
+            padding:5.8rem 0 0 6.6rem;
+
+        }
+        .font>span{
+            padding-right:1rem;
+            color: white;
+            font-weight: bold;
+        }
+        .img2
+        {
+            padding-top: 3rem;
+            font-size: 1.6rem;
+        }
+        .img2>img{
+            width: 100%;
+            height: 5rem;
+        }
+        .font2{
+
+
+            padding-top: 1rem;
+            background: #FFDC4E;
+            margin: -0.1rem 1.2rem;
+        }
+        .font3{
+            padding-top: 1rem;
+            background: #FFDC4E;
+            margin: -0.5rem 1.2rem;
+        }
+        .font3 a{
+            color: white;
+            background: url("img/4_08.jpg") no-repeat;
+            background-size:cover;
+            display: inline-block;
+            width:9.5rem;
+            height:4rem;
+            margin:0.55rem 0.5rem;
+            text-align: center;
+            font-weight: bold;
+            line-height: 4rem;
+        }
+        .img3>img{
+            width: 100%;
+            height: 5rem;
+        }
+        .font4{
+            background: #FFDC4E;
+            margin:0 1.2rem 1.2rem;
+            padding-bottom:0.001rem;
+        }
+        .font4>ul{
+            background: #FFFFFF;
+            margin:0 1rem 1rem 1rem;
+            padding :0 2rem 0 2rem;
+
+        }
+        *{
+            list-style-type: none;
+        }
+        .li{
+
+            border-bottom:1px #eff4f7 solid;
+            background:url("img/9_14.jpg")  no-repeat 29rem;
+        }
+        .yipai{
+            display: inline-block;
+            font-size: 0.6rem;
+            background: #eff4f7;
+            color: #A09798;
+            padding:0.3rem;
+            margin-bottom:1rem;
+        }
+        .color{
+            color: red;
+        }
+        .a{
+            padding-top:2rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="img">
+        <img src="img/1_01.gif">
+    </div>
+</header>
+<section>
+    <div class="backimg">
+        <div class="font">
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+        </div>
+    </div>
+</section>
+<section class="img2 text-center">
+    <img src="img/3_05.jpg">
+    <div class="font2">
+        <p>投递简历有机会获得开工礼物呦</p>
+    </div>
+    <div class="font3 text-center" >
+        <a href="#">销售</a> <a href="#">客服</a> <a href="#">普工</a>
+        <a href="#">司机</a> <a href="#">快递</a> <a href="#">保安</a>
+        <a href="#">库管</a> <a href="#">店员</a> <a href="#">会计</a>
+        <a href="#">法务</a> <a href="#">人事</a> <a href="#">行政</a>
+        <a href="#">设计</a> <a href="#">美工</a> <a href="#">家教</a>
+        <a href="" style="margin-right: 2rem; ">写简历</a>
+        <a href="">更多职位</a>
+    </div>
+    <div>&emsp;</div>
+    <div>&emsp;</div>
+
+</section>
+<div>&emsp;</div>
+<section class="img3">
+    <img src="img/8_02.jpg">
+    <div class="font4 ">
+        <ul>
+            <li class="li">
+                <div class="color a">财务/审计</div>
+                <div class="yipai">会计</div>
+                <div class="yipai">出纳</div>
+            </li>
+            <li class="li">
+                <div class="color ">财务/审计</div>
+                <div class="yipai">会计</div>
+                <div class="yipai">出纳</div>
+            </li>
+            <li class="li">
+                <div class="color">财务/审计</div>
+                <div class="yipai">会计</div>
+                <div class="yipai">出纳</div>
+            </li>
+            <li class="text-center">
+                <p style="color: #DC8006;">24小时反馈，<span style="color: #DE3839;">更多急速入职机会</span></p>
+            </li>
+        </ul>
+    </div>
+
+</section>
+</body>
+
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(function () {
+        function setRem() {
+            var clientWidth = $(window).width();
+            var nowRem = (clientWidth / 375 * 10);
+            $("html").css("font-size", parseInt(nowRem, 10) + "px");
+            console.log(nowRem);
+        };
+        setRem();
+        $(function () {
+            var timer;
+            $(window).bind("resize", function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    setRem();
+                }, 100);
+            });
+        });
+    });
+</script>
+</html>
